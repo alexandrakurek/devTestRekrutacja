@@ -5,7 +5,7 @@ import java.util.*;
 public class Task3 {
     public static void main(String[] args) {
 
-        System.out.println("Please write an example: the first line of input contains a positive number n, next n lines contains pairs of positive integers, where each pair identifies a connection between two vertices in a graph. ");
+        System.out.println(" Please write an example: the first line of input contains a positive number n, next n lines contains pairs of positive integers, where each pair identifies a connection between two vertices in a graph. ");
 
         Scanner scanner = new Scanner(System.in);
 
