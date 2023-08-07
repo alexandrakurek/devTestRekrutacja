@@ -24,6 +24,36 @@ public class Task3 {
             graph.get(u).add(v);
             graph.get(v).add(u); // If the graph is undirected
         }
+// Perform DFS to count separated graphs
+        int numSeparatedGraphs = countSeparatedGraphs(graph);
+
+        // Print the result
+        System.out.println(numSeparatedGraphs);
+    }
+
+    private static int countSeparatedGraphs(Map<Integer, List<Integer>> graph) {
+        int numSeparatedGraphs = 0;
+        Set<Integer> visited = new HashSet<>();
+
+        for (int vertex : graph.keySet()) {
+            if (!visited.contains(vertex)) {
+                numSeparatedGraphs++;
+                dfs(vertex, graph, visited);
+            }
+        }
+
+        return numSeparatedGraphs;
+    }
+
+    private static void dfs(int vertex, Map<Integer, List<Integer>> graph, Set<Integer> visited) {
+        visited.add(vertex);
+        List<Integer> neighbors = graph.get(vertex);
+        for (int neighbor : neighbors) {
+            if (!visited.contains(neighbor)) {
+                dfs(neighbor, graph, visited);
+            }
+        }
+
     }
 
 
