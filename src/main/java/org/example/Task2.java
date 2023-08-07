@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Test2 {
+public class Task2 {
     public static void main(String[] args) {
 
         // Create simple list of integers
