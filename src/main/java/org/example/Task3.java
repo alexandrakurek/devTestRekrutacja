@@ -5,6 +5,8 @@ import java.util.*;
 public class Task3 {
     public static void main(String[] args) {
 
+        System.out.println("Please write an example: the first line of input contains a positive number n, next n lines contains pairs of positive integers, where each pair identifies a connection between two vertices in a graph. ");
+
         Scanner scanner = new Scanner(System.in);
 
         // Read the number of pairs (n) from the first line of input
@@ -24,7 +26,8 @@ public class Task3 {
             graph.get(u).add(v);
             graph.get(v).add(u); // If the graph is undirected
         }
-// Perform DFS to count separated graphs
+
+        // Perform DFS to count separated graphs
         int numSeparatedGraphs = countSeparatedGraphs(graph);
 
         // Print the result
